@@ -19,8 +19,8 @@ st.write(
 def load_data():
     athletes = pd.read_csv("athletes - Sheet1.csv")
     brands = pd.read_csv("brands - Sheet1.csv")
-    athletes.columns = athletes.columns.str.strip()
-    brands.columns = brands.columns.str.strip()
+    athletes.columns = athletes.columns.str.strip().str.lower()
+brands.columns = brands.columns.str.strip().str.lower()
     return athletes, brands
 
 try:
